@@ -2,12 +2,14 @@ import React from 'react';
 
 import PageHeader from '../../components/PageHeader';
 
+import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
+
 import './styles.css';
 
-function TeacherList(){
-    return(
+function TeacherList() {
+    return (
         <div id="page-teacher-list" className="container">
-          <PageHeader title="Estes são os proffys disponíveis.">
+            <PageHeader title="Estes são os proffys disponíveis.">
                 <form id="search-teachers">
                     <div className="input-block">
                         <label htmlFor="subject">Matéria</label>
@@ -23,9 +25,40 @@ function TeacherList(){
                         <label htmlFor="time">Hora</label>
                         <input type="text" id="time" />
                     </div>
-                    
+
                 </form>
             </PageHeader>
+
+            <main>
+                <article className="teacher-item">
+                    <header>
+                        <img src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="Cristian" />
+                        <div>
+                            <strong>Cristian Augusto</strong>
+                            <span>Química</span>
+                        </div>
+                    </header>
+
+                    <p>
+                        Entusiasta das melhores tecnologias de química avançada.
+                    <br /><br />
+                    Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.
+                    </p>
+
+                    <footer>
+                        <p>
+                            Preço/hora
+                            <strong>R$ 80,00</strong>
+                        </p>
+                        <button type="button">
+                            <img src={whatsappIcon} alt="Whatsapp" />
+                            Entrar em contato
+                        </button>
+                    </footer>
+
+
+                </article>
+            </main>
         </div>
     )
 }
